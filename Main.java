@@ -7,21 +7,18 @@ public class Main{
         int a = scanner.nextInt();
         List<Integer> so = new ArrayList<>();
         for(int i=1; i<=a;i++){
-            if(i%3==0){
+            if(i%2==0){
                 so.add(i);
             }
         }
-        System.out.println(so.size());
+        int sum=0;
+        for(int tong: so){
+            sum+=tong;
+        }
+        System.out.println(sum);
 
         
-        if (so.size()==0){
-            System.out.println("-");
-        }
-        else{
-            for(int hi: so){
-                System.out.print(String.valueOf(hi)+ ' ');
-            }
-        }
+        
     }
 }
 
