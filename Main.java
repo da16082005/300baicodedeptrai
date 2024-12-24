@@ -3,14 +3,12 @@ import java.util.Scanner;
 public class Main{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        int TBHKI = scanner.nextInt();
-        int TBHKII = scanner.nextInt();
-        float TBCN = (float)(TBHKI+(TBHKII*2))/3;
+        int a = scanner.nextInt();
         
-        System.out.printf("%.1f%n", TBCN);
+        
 
 
-        if(TBCN>8){
+        if(a==1){
             System.out.println("Gioi");
         }
         else if(TBCN>=6.5 && TBCN <8){
