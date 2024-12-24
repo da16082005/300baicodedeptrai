@@ -1,26 +1,33 @@
 import java.util.Scanner;
-
+import java.util.ArrayList;
+import java.util.List;
 public class Main{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();
-        
-        
+        List<Integer> so = new ArrayList<>();
+        for(int i=1; i<=a;i++){
+            if(i%3==0){
+                so.add(i);
+            }
+        }
+        System.out.println(so.size());
 
-
-        if(a==1){
-            System.out.println(12000);
+        
+        if (so.size()==0){
+            System.out.println("-");
         }
-        else if(a>=2 && a <=30){
-            int b = 12000+ (a-1)*10000;
-            System.out.println(b);
+        else{
+            for(int hi: so){
+                System.out.print(String.valueOf(hi)+ ' ');
+            }
         }
-        else if(a>=31){
-            int b = 12000+ 29*10000 +(a-30)*9000;
-            System.out.println(b);
-        }
-        scanner.close();
     }
 }
-        
+
+
+
+    
+
+
        
