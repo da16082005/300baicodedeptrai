@@ -9,19 +9,15 @@ public class Main{
 
 
         if(a==1){
-            System.out.println("Gioi");
+            System.out.println(12000);
         }
-        else if(TBCN>=6.5 && TBCN <8){
-            System.out.println("Kha");
+        else if(a>=2 && a <=30){
+            int b = 12000+ (a-1)*10000;
+            System.out.println(b);
         }
-        else if(TBCN>=5 && TBCN <6.5){
-            System.out.println("Trung binh");
-        }
-        else if(TBCN>=3.5 && TBCN<5){
-            System.out.println("Yeu");
-        }
-        else if(TBCN < 3.5){
-            System.out.println("Kem");
+        else if(a>=31){
+            int b = 12000+ 29*10000 +(a-30)*9000;
+            System.out.println(b);
         }
         scanner.close();
     }
