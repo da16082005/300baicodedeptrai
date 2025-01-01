@@ -8,11 +8,11 @@ def is_prime(number):
             exit()
     return True
 m,n = map(int, input().split())
-count=đ
+count=[]
 for i in range(m,n+1):
     if is_prime(i)== True:
         count.append(i)
-print(" ".join(count))
+print(*count)
         
            
         
