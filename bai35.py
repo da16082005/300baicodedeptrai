@@ -1,4 +1,3 @@
-
 def is_prime(number):
     if number <2:
         return False
@@ -8,11 +7,11 @@ def is_prime(number):
             exit()
     return True
 m,n = map(int, input().split())
-count=đ
+count=0
 for i in range(m,n+1):
     if is_prime(i)== True:
-        count.append(i)
-print(" ".join(count))
+        count+= i
+print(f"{count:.2f}")
         
            
         
