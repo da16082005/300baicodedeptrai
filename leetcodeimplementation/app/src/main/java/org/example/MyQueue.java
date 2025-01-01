@@ -1,18 +1,22 @@
+package leetcodeimplementation.app.src.main.java.org.example;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-public class MyQueue {
-    public List<Integer> data;
+public class MyQueue<T> {
+    public List<T> data;
     public int start;
+
     public MyQueue(){
-        data= new ArrayList<Integer>();
+        data= new ArrayList<T>();
         start =0;
 
     } 
-    public void push(int x){
+
+    public void push(T x){
         data.add(x);
     }
-    public int pop(){
+
+    public Object pop(){
         
         
         if(isEmpty()==false){
@@ -20,19 +24,21 @@ public class MyQueue {
             return data.get(start -1);
         }
         else{
-            return -100000000;
+            return -10000000;
         }
-
-
-
     }
-    public int Front(){
+
+    public T Front(){
         return data.get(start);
 
     }
+
     public boolean isEmpty(){
         return start >= data.size();
 
+    }
+    public int getSize(){
+        return data.size()- start;
     }
 
     
