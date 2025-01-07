@@ -15,9 +15,9 @@ public class MyCircularQueue {
 
 
     }
-    public void enQueue(int x){
+    public boolean enQueue(int x){
         if(isFull()==true ){
-            return;
+            return false;
         }
         if(isEmpty()==true){
             head=0;
@@ -25,11 +25,12 @@ public class MyCircularQueue {
         }
         tail= (tail+1)%size;
         a[tail]=x;
+        return true;
+    }
 
-        }
-    public int deQueue(){
+    public boolean deQueue(){
         if (isEmpty()==true){
-            return -1;
+            return false;
         }
         if(head==tail){
             head=-1;
@@ -37,7 +38,7 @@ public class MyCircularQueue {
             
         }
         head=(head+1)%size;
-        return a[head];
+        return true;
 
     }
     public int front(){

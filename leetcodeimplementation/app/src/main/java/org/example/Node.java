@@ -3,20 +3,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Node {
-    public int data;
+    public int x;
+    public int y;
     public List<Node> neighbors;
 
-    public Node(int data){
+    public Node(int x, int y){
         this.neighbors= new ArrayList<>();
-        this.data = data;
+        this.x = x;
+        this.y=y;
+
     }
 
-    public int getData(){
-        return data;
+    public int getX(){
+        return x;
+    }
+    public int getY(){
+        return y;
     }
 
-    public void setData(int data){
-        this.data= data;
+    public void setX(int x){
+        this.x= x;
+    }
+    public void setY(int y){
+        this.y =y;
     }
 
     public void addNeighbor(Node neighbor){
@@ -34,11 +43,13 @@ public class Node {
     public String toString(){
         StringBuilder sb= new StringBuilder();
         
-        sb.append(", Data: ").append(String.valueOf(data));
+        sb.append(", Data: ").append(String.valueOf(x)).append(String.valueOf(y));
+
         
         sb.append(", Neighbors: [");
         for (Node neighbor : neighbors) {
-            sb.append(neighbor.data).append(" ");
+            sb.append(neighbor.x).append(" ");
+            sb.append(neighbor.y).append(" ");
         }
         sb.append("]");
         return sb.toString();
