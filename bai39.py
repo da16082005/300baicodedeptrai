@@ -1,10 +1,14 @@
-import math
-def is_square_number(n):
-    root = math.isqrt(n)
-    if root * root == n:
-        return "Yes"
-    else:
-        return "No"
-n = int(input())
-if n > 0:
-    print(is_square_number(n))
+a=int(input())
+
+ls=[]
+i=1
+while i*i <= a:
+    
+    ls.append(i*i)
+    i+=1
+if a== ls[len(ls)-1]:
+    print("Yes")
+else:
+    print("No")
+    
+

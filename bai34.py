@@ -12,7 +12,8 @@ count=[]
 for i in range(m,n+1):
     if is_prime(i)== True:
         count.append(i)
-print(*count)
+for i in range(len(count)):
+    print(str(count[i])+" ",end='')
         
            
         
