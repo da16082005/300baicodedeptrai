@@ -1,7 +1,7 @@
 a = list(map(int, input().split()))
 
 max1=float('-inf')
-max1=float('-inf')
+max2=float('-inf')
 if len(a)<2:
     print('-')
 for i in range(len(a)):
