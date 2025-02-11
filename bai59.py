@@ -1,7 +1,7 @@
 a=int(input())
 b={}
 max_value = float('-inf')
-max_key=0
+max_key=None
 for i in range(a):
     c=int(input())
     
